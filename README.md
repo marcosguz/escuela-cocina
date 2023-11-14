@@ -1,16 +1,28 @@
 <h1 align="center">Escuela de Cocina App</h1>
 
-```html
-	<div class="producto">
-		<img src="img/guitarra_01.jpg" alt="Imagen Guitarra" class="producto__imagen">
+```scss
+@mixin boton($bgColor, $colorTexto) {
+    background-color: $bgColor;
+    padding: 1.5rem 4rem;
+    color: $colorTexto;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    transition-property: background-color;
+    transition-duration: .3s;
+    text-align: center;
 
-		<div class="producto__contenido">
-			<h3 class="producto__nombre">Lukather</h3>
-			<p class="producto__descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, maxime doloribus provident explicabo libero quae nulla illum officia.</p>
-			<p class="producto__precio">$299</p>
-			<a href="producto.html" class="producto__enlace">Ver Producto</a>
-		</div>
-	</div>
+    @include tablet {
+        width: auto;
+    }
+
+    &:hover {
+        background-color: darken($bgColor, 10%);
+    }
+}
 
 ```
 
